@@ -39,9 +39,9 @@ function calculateMonthlyPayment(values) {
   const p = values.amount;
   const i = values.rate/12;
   const n = values.years*12;
-  console.log(`principle amount: ${p}, monthly rate: ${i}, total # of payments: ${n}`);
+  console.log(`principle amount(p): ${p}, monthly rate(i): ${i}, total # of payments(n): ${n}`);
 
-  const monthlyPayment = (p*i)/(1-((1+i)^n));
+  const monthlyPayment = (p*i)/(1-((1+i)**(-n)));
   console.log("monthly payments are:", monthlyPayment);
   return "monthly payments are", monthlyPayment;
 }
