@@ -31,11 +31,6 @@ describe("Servers test (with setup and tear-down)", function() {
   
   afterEach(function() {
     // teardown logic
-    // if(Object.keys(allServers).length != 0){
-    //   serverNameInput.value = '';
-    //   delete allServers['server' + serverId];
-    //   serverTbody.lastChild.remove();
-    // }
     serverId = 0;
     serverTbody.innerHTML = '';
     allServers = {};

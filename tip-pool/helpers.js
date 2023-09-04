@@ -44,4 +44,5 @@ function removeServer(e) {
     delete allServers[targetTr.id];
   }
   targetTr.remove();
+  updateSummary();
 }
