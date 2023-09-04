@@ -28,7 +28,7 @@ describe('Payments.js tests', () => {
         
         let curPaymentList = document.querySelectorAll('#paymentTable tbody tr td');
 
-        expect(curPaymentList.length).toEqual(3);
+        expect(curPaymentList.length).toEqual(4);
         expect(curPaymentList[0].innerText).toEqual('$5');
         expect(curPaymentList[1].innerText).toEqual('$1');
         expect(curPaymentList[2].innerText).toEqual('20%');
