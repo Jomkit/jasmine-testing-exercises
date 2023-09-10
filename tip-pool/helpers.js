@@ -8,7 +8,6 @@ function sumPaymentTotal(type) {
 
     total += Number(payment[type]);
   }
-
   return total;
 }
 
@@ -35,14 +34,22 @@ function appendDeleteBtn(tr){
   });
   
   tr.append(newTd);
+
 }
 
 function removeServer(e) {
   let targetTr = e.target.parentElement;
   if(targetTr.parentElement.parentElement.id == 'serverTable'){
-    console.log('In Server List');
     delete allServers[targetTr.id];
+    
   }
   targetTr.remove();
+
+  paymentId = e.target.parentElement.getAttribute('id');
+  delete allPayments[paymentId];
+  updateServerTable();
   updateSummary();
+
+  billAmtInput.value = '';
+  tipAmtInput.value = '';
 }

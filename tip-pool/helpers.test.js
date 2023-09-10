@@ -39,6 +39,15 @@ describe('helpers.js tests', () => {
         expect(testTr.children.length).toEqual(1);
         expect(testTr.firstChild.innerText).toEqual('test');
     })
+
+    it('should generate delete td and append to tr on appendDeleteBtn(tr, type)', function () {
+        let newTr = document.createElement('tr');
+    
+        appendDeleteBtn(newTr);
+    
+        expect(newTr.children.length).toEqual(1);
+        expect(newTr.firstChild.innerHTML).toEqual('X');
+    });
     
     afterEach(() => {
         billAmtInput.value = '';
